@@ -21,5 +21,14 @@ export default{
 </script>
 
 <template>
-    <h2>{{ this.prefectures }}</h2>
+    <div class="prefectures-checkbox">
+        <li v-for="(prefecture, i) in prefectures">
+            <input
+                type="checkbox"
+                :value="prefecture"
+                v-model="selectedPrefectures"
+            >
+            <span>{{ prefecture.prefName }}</span>
+        </li>
+    </div>
 </template>
