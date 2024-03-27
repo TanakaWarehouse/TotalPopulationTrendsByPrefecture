@@ -22,12 +22,14 @@ export default{
 
 <template>
     <div class="prefectures-checkbox">
+        <label>都道府県一覧</label>
         <li v-for="(prefecture, i) in prefectures">
             <input
                 type="checkbox"
                 :value="prefecture"
                 v-model="selectedPrefectures"
             >
+            <!-- v-forを回す回数指定 -->
             <span>{{ prefecture.prefName }}</span>
         </li>
     </div>
